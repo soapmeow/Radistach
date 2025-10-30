@@ -1,9 +1,14 @@
 #include "geometry.h"
+#include <cmath>
 
 // Vectors!
 // Vector2 start
 
 Vec2d::Vec2d(double x, double y) : x(x), y(y) {};
+
+double Vec2d::Distance(const Vec2d& temp){
+	return sqrt(pow(temp.x-x,2)+pow(temp.y-y,2));
+}
 
 // Vectors addition. Vector + Temp_Vector
 Vec2d Vec2d::operator+(const Vec2d& temp) const {
@@ -40,6 +45,10 @@ Vec2d Vec2d::operator/(const double& scalar) const {
 // 
 // Vector 3 start
 Vec3d::Vec3d(double x, double y, double z) : x(x), y(y), z(z) {};
+
+double Vec3d::Distance(const Vec3d& temp){
+	return sqrt(pow(temp.x-x,2)+pow(temp.y-y,2)+pow(temp.z-z,2));
+}
 
 // Vectors addition. Vector + Temp_Vector
 Vec3d Vec3d::operator+(const Vec3d& temp) const {
