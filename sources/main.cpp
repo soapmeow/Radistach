@@ -17,6 +17,7 @@ int main(int argc, char* argv[]){
 	std::cout << pointA.x << " " << pointA.y << " " << pointA.z << std::endl;
 	std::cout << pointB.x << " " << pointB.y << std::endl;
 	
-	std::cin.get();
+	char temp;
+	std::cin.get(temp);
 	return EXIT_SUCCESS;
 }
