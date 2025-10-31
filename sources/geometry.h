@@ -42,4 +42,4 @@ public:
     Vec3d operator/(const double& scalar) const;  // Vector / scalar
 };
 
-#endif geometry_H
+#endif // geometry_h
