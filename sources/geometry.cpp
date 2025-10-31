@@ -34,7 +34,7 @@ Vec2d& Vec2d::operator-=(const Vec2d& temp) {
 	return *this;
 }
 
-Vec2d Vec2d::Normalized(){
+Vec2d Vec2d::Normalized() const {
 	double length = sqrt(pow(x,2)+pow(y,2));
 	return Vec2d(x / length, y / length);
 }
@@ -114,7 +114,7 @@ Vec3d& Vec3d::operator-=(const Vec3d& temp) {
 	return *this;
 }
 
-Vec3d Vec3d::Normalized(){
+Vec3d Vec3d::Normalized() const {
 	double length = sqrt(x*x + y*y + z*z);
 	return Vec3d(x / length, y / length, z / length);
 }

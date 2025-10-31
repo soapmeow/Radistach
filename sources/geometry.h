@@ -10,7 +10,8 @@ public:
 	
     Vec2d(double x, double y);
 	
-	Vec2d Normalized();
+	Vec2d Normalized() const;
+
 	Vec2d& operator=(const Vec2d& temp);          // Vector = Vector_temp
 	Vec2d& operator+=(const Vec2d& temp);         // Vector += Vector_temp
 	Vec2d& operator-=(const Vec2d& temp);         // Vector -= Vector_temp
@@ -30,7 +31,8 @@ public:
 
     Vec3d(double x, double y, double z);
 	
-	Vec3d Normalized();
+	Vec3d Normalized() const;
+
 	Vec3d& operator=(const Vec3d& temp);          // Vector = Vector_temp
 	Vec3d& operator+=(const Vec3d& temp);         // Vector += Vector_temp
 	Vec3d& operator-=(const Vec3d& temp);         // Vector -= Vector_temp

@@ -1,7 +1,8 @@
 #include <iostream>
 #include "geometry.h"
+#include "physics.h"
 
-void test(){ //new things
+void test1(){ //new things
 	Vec3d A3(1,2,3);
 	Vec3d B3(1,2,3);
 	
@@ -26,8 +27,23 @@ void test(){ //new things
 	std::cout << "Normalized 3D: " << A2.Normalized().y << std::endl;
 }
 
+void test2(){
+	// Transform 0,0,0 Velocity 0,0,0 Mass 1000.0
+	physicBody Rocket({0,0,0},{0,0,0}, 1000.0);
+
+	Rocket.addForce({0,1,0}, 10000); // Force up
+	Rocket.addForce({1,0,0}, 300); // Force right
+	Rocket.addForce({0,-1,0},9800); // Gravity
+	Rocket.addForce({0,0,1}, 50); // Wind
+
+	for(int time = 0; time < 10; ++time){
+		Rocket.update(time);
+		std::cout << Rocket.getTransform().x << " " << Rocket.getTransform().y << " " << Rocket.getTransform().z << "\n";
+	}
+}
+
 int main(int argc, char* argv[]){
-	test();
+	test2();
 	
 	char temp;
 	std::cin.get(temp);
